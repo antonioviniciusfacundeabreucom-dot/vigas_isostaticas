@@ -18,28 +18,7 @@ header {
 }
 
     
-.forcas {
-    width:100px;
-    max-width:250px;
-    box-sizing:border-box;
-    margin-bottom: 20px;
-     border-radius: 5px;
-             display: flex;
-    flex-direction: columm;
-    flex: 1;
-}
 
-.distancia{
-    width:100px;
-    max-width:250px;
-    margin-bottom: 20px;
-     border-radius: 5px;
-    display: flex;
-    flex-direction: columm;
-    flex: 2;
-
- 
-}
 
 h1{
     font-size:32px;
