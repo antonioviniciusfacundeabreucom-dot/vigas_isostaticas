@@ -1,44 +1,14 @@
+*{
+    box-sizing:border-box;
+}
 body {
     margin: 0;
     padding: 0;
     justify-content: left;
 }
-label[type="forca1"] {
-  
-    display: block;
-    margin-bottom: 10px;
-    width: 150px;
-    height: 50px;
+
    
 
-    border-radius: 5px;
-}
-label[type="forca2"] {
-  
-    display: block;
-    margin-bottom: 10px;
-    width: 150px;
-    height: 50px;
-  
-    border-radius: 5px;
-}
-label[type="distancia1"] {
-    display: block;
-    margin-bottom: 10px;
-    width: 150px;
-    height: 50px;
-    border-radius: 5px;
-  
-
-}
-label[type="distancia2"] {
-
-    display: block;
-    margin-bottom: 10px;
-    width: 150px;
-    height: 50px;
-    border-radius: 5px;
-}
 header {
     background-color: #385f8f;
     padding: 20px;
@@ -46,21 +16,60 @@ header {
     height: 50px;
     gap: 2rem;
 }
-.container_flex.forcas{
-    display: grid;
-    top: 50px;
-    left: 50px;
-    text-align: left;
-}
-.container_flex.distancias{
-    display: grid;
-    top: 50px;
-    left: 50px;
-    text-align:left;
-}
+
     
-input{
+.forcas {
     width:100px;
     max-width:250px;
     box-sizing:border-box;
+    margin-bottom: 20px;
+     border-radius: 5px;
+             display: flex;
+    flex-direction: columm;
+    flex: 1;
+}
+
+.distancia{
+    width:100px;
+    max-width:250px;
+    margin-bottom: 20px;
+     border-radius: 5px;
+    display: flex;
+    flex-direction: columm;
+    flex: 2;
+
+ 
+}
+
+h1{
+    font-size:32px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    gap:15px 20px;
+    text-align:left;
+    column-gap: 10px;
+    row-gap: 15px;
+  
+    
+
+    }
+.bloco {
+    display: flex;
+    flex-direction:column;
+    gap:5px;
+
+}
+.bloco input{
+    width :100px;
+    height:25px;
+    padding: 10px;
+    margin-bottom: 20px;
+     border-radius: 5px;
+    
 }
