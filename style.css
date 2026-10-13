@@ -1,23 +1,25 @@
 body {
     margin: 0;
     padding: 0;
+    justify-content: left;
 }
 label[type="forca1"] {
+  
     display: block;
     margin-bottom: 10px;
     width: 150px;
     height: 50px;
-    top: 100px;
-    left: 0px;
+   
+
     border-radius: 5px;
 }
 label[type="forca2"] {
+  
     display: block;
     margin-bottom: 10px;
     width: 150px;
     height: 50px;
-    top: 100px;
-    left: 100px;
+  
     border-radius: 5px;
 }
 label[type="distancia1"] {
@@ -25,17 +27,16 @@ label[type="distancia1"] {
     margin-bottom: 10px;
     width: 150px;
     height: 50px;
-    bottom: 100px;
-    left: 0px;
     border-radius: 5px;
+  
+
 }
 label[type="distancia2"] {
+
     display: block;
     margin-bottom: 10px;
     width: 150px;
     height: 50px;
-    bottom: 0px;
-    left: 100px;
     border-radius: 5px;
 }
 header {
@@ -44,4 +45,22 @@ header {
     text-align: center;
     height: 50px;
     gap: 2rem;
+}
+.container_flex.forcas{
+    display: grid;
+    top: 50px;
+    left: 50px;
+    text-align: left;
+}
+.container_flex.distancias{
+    display: grid;
+    top: 50px;
+    left: 50px;
+    text-align:left;
+}
+    
+input{
+    width:100px;
+    max-width:250px;
+    box-sizing:border-box;
 }
