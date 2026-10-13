@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+label[type="forca1"] {
+    display: block;
+    margin-bottom: 10px;
+    width: 150px;
+    height: 50px;
+    top: 100px;
+    left: 0px;
+    border-radius: 5px;
+}
+label[type="forca2"] {
+    display: block;
+    margin-bottom: 10px;
+    width: 150px;
+    height: 50px;
+    top: 100px;
+    left: 100px;
+    border-radius: 5px;
+}
+label[type="distancia1"] {
+    display: block;
+    margin-bottom: 10px;
+    width: 150px;
+    height: 50px;
+    bottom: 100px;
+    left: 0px;
+    border-radius: 5px;
+}
+label[type="distancia2"] {
+    display: block;
+    margin-bottom: 10px;
+    width: 150px;
+    height: 50px;
+    bottom: 0px;
+    left: 100px;
+    border-radius: 5px;
+}
+header {
+    background-color: #385f8f;
+    padding: 20px;
+    text-align: center;
+    height: 50px;
+    gap: 2rem;
+}
