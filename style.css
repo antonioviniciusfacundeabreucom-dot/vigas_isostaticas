@@ -5,39 +5,41 @@ body {
     margin: 0;
     padding: 0;
     justify-content: left;
+    min-height:100hv;
 }
-
-   
 
 header {
     background-color: #385f8f;
-    padding: 20px;
+    padding: 5px;
     text-align: center;
-    height: 50px;
+    height: 150px;
     gap: 2rem;
-}
-
     
+}
+main{
+    background-color: #244c7c;
+    height: 50px;
 
+}
 
 h1{
     font-size:32px;
     color: white;
     text-shadow: 2px 2px 4px #000000;
+    
 }
 
 
 .container{
     display: grid;
     grid-template-columns: repeat(2, 200px);
-    gap:15px 20px;
+    gap:30px 40px;
     text-align:left;
-    column-gap: 10px;
-    row-gap: 15px;
+    column-gap: 30px;
+    row-gap: 30px;
+    margin-top: 200px;
   
-    
-
-    }
+}
 .bloco {
     display: flex;
     flex-direction:column;
@@ -52,3 +54,24 @@ h1{
      border-radius: 5px;
     
 }
+.resultados {
+    position:absolute;
+    top: 300px;
+    left:500px;
+     text-align: center;
+     width:250px;
+
+}
+
+img{
+      position:absolute;
+    width: 300px;
+    left:50px;
+    margin-left: top;
+    text-align: left;
+
+  
+    
+    
+}
+
