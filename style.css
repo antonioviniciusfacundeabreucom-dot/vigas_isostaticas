@@ -38,6 +38,9 @@ h1{
     column-gap: 30px;
     row-gap: 30px;
     margin-top: 200px;
+    padding: 20px;
+    
+    
   
 }
 .bloco {
@@ -69,6 +72,7 @@ img{
     left:50px;
     margin-left: top;
     text-align: left;
+    padding: 20px;
 
   
     
