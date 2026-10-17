@@ -74,8 +74,29 @@ img{
     text-align: left;
     padding: 20px;
 
-  
-    
+}
+.botao{
+   position: absolute;
+    left : 125px;
+    bottom: 5px;
+    width: 100px;
+    border-radius: 5px;
+    color:#F4F0EA;
+    margin-left: top;
+    text-align: left;
     
 }
+@media(max-widht:1280px){
+    main{
+    padding: 40px 20px;
+    display:flex;
+    justify-content: center;
+
+}
+}
+
+
+
+
+
 
