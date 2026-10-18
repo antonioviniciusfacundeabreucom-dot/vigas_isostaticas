@@ -36,20 +36,16 @@
 
             <div class = "bloco">
             <label for = "distancia1">Primeira distância em relação ao suporte 1</label>
-            <input type = "numero2" name = "distancia1" for = "distancia1"
+            <input type = "distancia" name = "distancia1" for = "distancia1"
             value=""  placeholder = "m " id = "distancia1">
             </div>
 
-            <div class = "bloco">
-            <label for ="distancia2">Segunda distância em relação ao suporte 1</label>
-            <input type = "distancia2" name = "distancia2" for = "distancia2"
-              value = "" placeholder = "m" id = "distancia2">
-            </div>
+ 
             
 
             <div class = "bloco">
                 <label for = "altura">Altura da seção transvensal</label>
-                <input type = "Altura util" name = "altura" for = "altura"
+                <input type = "altura" name = "altura" for = "altura"
                 value = "" placeholder = "m" id = "altura">
             </div>
             
@@ -59,8 +55,12 @@
                 <input type = "largura" name = "largura" for = "largura"
                 value = "" placeholder = "m" id = "largura">
                 </div>
-              <button onclick = "calculo()">Calcular</button>
-              <p id=" mensagem"></p>
+            <div class = "bloco">
+                <label for = "comprimento">comprimento da viga</label>
+                <input type = "comprimento" name = "comprimento" for = "comprimento"
+                value = "" placeholder = "m" id = "comprimento">
+                </div>
+
          
                 
                 
@@ -69,7 +69,10 @@
               <img src="./Assets/viga_isostática.png"/>
                <div class = "resultados">
                 <h3>Resultado do cálculo</h3>
+               
             </div>
+            <div class = "botao">
+             <button onclick = "calculo()">Calcular</button>
 
             </div>
                  

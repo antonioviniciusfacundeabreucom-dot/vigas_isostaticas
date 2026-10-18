@@ -58,27 +58,28 @@ h1{
     
 }
 .resultados {
-    position:absolute;
-    top: 300px;
+    position:relative;
+    bottom: 300px;
     left:500px;
-     text-align: center;
      width:250px;
 
 }
 
 img{
-      position:absolute;
-    width: 300px;
-    left:50px;
+    position:relative;
+    width: 400px;
+    left: 10px;
     margin-left: top;
     text-align: left;
-    padding: 20px;
+    padding: 10px;
+    bottom: 20px;
+    
 
 }
 .botao{
-   position: absolute;
-    left : 125px;
-    bottom: 5px;
+   position: relative;
+    left : 150px;
+    bottom: 200px;
     width: 100px;
     border-radius: 5px;
     color:#F4F0EA;
