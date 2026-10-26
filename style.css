@@ -16,11 +16,7 @@ header {
     gap: 2rem;
     
 }
-main{
-    background-color: #244c7c;
-    height: 50px;
 
-}
 
 h1{
     font-size:32px;
@@ -59,22 +55,23 @@ h1{
 }
 .resultados {
     position:relative;
-    bottom: 300px;
+    bottom: 600px;
     left:500px;
      width:250px;
 
+
+}
+.vigaiso img {
+    width: 400px;
+    height: auto;
+    display: block;
 }
 
-img{
-    position:relative;
-    width: 400px;
-    left: 10px;
-    margin-left: top;
-    text-align: left;
+.vigaiso {
+    position: relative;
+    left: 0px;
+    top: 0px;
     padding: 10px;
-    bottom: 20px;
-    
-
 }
 .botao{
    position: relative;
@@ -88,7 +85,7 @@ img{
     
 }
 @media(max-widht:1280px){
-    main{
+    header{
     padding: 40px 20px;
     display:flex;
     justify-content: center;

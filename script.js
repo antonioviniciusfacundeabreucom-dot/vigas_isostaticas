@@ -13,12 +13,17 @@ function calculo(){
     &&(distancia1)
     &&(altura)&&(largura)&&(comprimento))){
     const viga = new viga_iso(forca1, forca2, distancia1, comprimento);
+    const {peso1, peso2} = viga.Pesos();
     const {Ra, Rb} = viga.Reacoes();
-    console.log(Ra);
-    console.log(Rb);
-    const {peso1, peso2} = viga.pesos();
-    console.log(peso1);
-    console.log(peso2);
+      document.getElementById("resultadoRa").textContent = 
+      `Ra = ${Ra.toFixed(2)} N`;
+      document.getElementById("resultadosRb").textContent = 
+      `Rb  = ${Rb.toFixed(2)} N`;
+      document.getElementById("resultadoPeso1").textContent =
+      `Peso 1 = ${peso1.toFixed(2)} kg`;
+      document.getElementById("resultadoPeso2").textContent = 
+      `Peso 2 = ${peso2.toFixed(2)} kg`;
+
   }else{
    alert("Você esqueceu um campo vazio");
   }
@@ -47,16 +52,16 @@ class viga_iso{
 
 
  }
-  pesos(){
+  Pesos(){
   const { Ra, Rb } = this.Reacoes();
-  const semelhanca = (this.comprimento - this.distancia1)*Ra/(this.forca1)*(this.comprimento - this.distancia1);
-  const peso1 = Ra*semelhanca/2;
+  const semelhanca = (Ra*(this.comprimento - this.distancia1))/((this.forca1)*(this.comprimento - this.distancia1));
+  const peso1 = (Ra*semelhanca)/2;
   const calculo1 =  this.forca1*(this.comprimento - this.distancia1) - Ra;
-  const calculo2 = Rb - calculo1;
-  const peso2 = calculo2/this.distancia1 + calculo2*this.distancia1;
+  const calculo2 = (Rb - calculo1);
+  const peso2 = ((calculo2/2)/2) +  (calculo2/2)*(this.distancia1);
 
 
-  return {peso1, peso2};
+  return {peso1, peso2, calculo1, calculo2};
 
  }
 }
