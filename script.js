@@ -4,19 +4,21 @@ function calculo(){
   var distancia1 = Number(document.getElementById("distancia1").value);
   var altura = Number(document.getElementById("altura").value);
   var largura = Number(document.getElementById("largura").value);
-   var comprimento = Number(document.getElementById("comprimento").value);
+  var comprimento = Number(document.getElementById("comprimento").value);
    if(comprimento == distancia1){
     alert("Denominador zero");
    }
 
   if (((forca1)&&(forca2)
-  &&(distancia1)
-  &&(altura)&&(largura)&&(comprimento))){
+    &&(distancia1)
+    &&(altura)&&(largura)&&(comprimento))){
     const viga = new viga_iso(forca1, forca2, distancia1, comprimento);
     const {Ra, Rb} = viga.Reacoes();
     console.log(Ra);
     console.log(Rb);
-    
+    const {peso1, peso2} = viga.pesos();
+    console.log(peso1);
+    console.log(peso2);
   }else{
    alert("Você esqueceu um campo vazio");
   }
@@ -33,11 +35,11 @@ class viga_iso{
  
   Reacoes(){
   const Ma = ((this.forca1)*(this.comprimento - this.distancia1))*(this.comprimento-this.distancia1)/2;
- const Mb =  (this.forca2)*((this.distancia1/2) +
+  const Mb =  (this.forca2)*((this.distancia1/2) +
   (this.comprimento - this.distancia1)); 
- const Mc = (this.forca2*this.comprimento);
+  const Mc = (this.forca2*this.comprimento);
   const Rb = (Ma + Mb + Mc) 
-/(this.comprimento-this.distancia1);
+  /(this.comprimento-this.distancia1);
   const Ra = (this.forca1*(this.comprimento-this.distancia1) + this.distancia1*this.forca2 + 
   this.forca1 - Rb);
   return {Ra, Rb};
@@ -45,12 +47,16 @@ class viga_iso{
 
 
  }
-  pesos(peso1, peso2){
-  peso1 = (Ra*medida)/2;
-  peso2 = ((Rb - ((this.forca1)*(this.comprimento-this.distancia1) - Ra)
-  *this.distancia1)/2) + (Rb - ((this.forca1)*(this.comprimento-this.distancia1) - Ra)
-  *this.distancia1)*this.distancia1;
-   return {peso1:peso1, peso2:peso2};
+  pesos(){
+  const { Ra, Rb } = this.Reacoes();
+  const semelhanca = (this.comprimento - this.distancia1)*Ra/(this.forca1)*(this.comprimento - this.distancia1);
+  const peso1 = Ra*semelhanca/2;
+  const calculo1 =  this.forca1*(this.comprimento - this.distancia1) - Ra;
+  const calculo2 = Rb - calculo1;
+  const peso2 = calculo2/this.distancia1 + calculo2*this.distancia1;
+
+
+  return {peso1, peso2};
 
  }
 }
